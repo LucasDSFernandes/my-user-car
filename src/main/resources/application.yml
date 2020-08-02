@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: ${PORT:8082}
 spring:  
   jpa:
     show-sql : true
@@ -19,7 +19,7 @@ security:
     
 eureka:
   instance:
-    port: 9090
+    port: ${PORT:9090}
     hostname: localhost
   client:
     registerWithEureka: true
@@ -50,7 +50,7 @@ spring:
 auth:
   api:
     name: auth-service-dev
-    url: http://localhost:8082
+    url: https://app-authservice.herokuapp.com/
 --- 
 ################################### TESTE #####################################################
 spring:
@@ -75,4 +75,4 @@ spring:
 auth:
   api:
     name: auth-service-test
-    url: http://localhost:8082
+    url: https://app-authservice.herokuapp.com/
