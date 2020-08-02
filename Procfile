@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT -Dspring.profiles.active=test $JAVA_OPTS -jar target/user-service-1.0.0.jar
+web java --spring.config.location=src/main/resources/application.yml --spring.config.name=application.yml -Dserver.port=$PORT -Dspring.profiles.active=test $JAVA_OPTS -jar target/user-service-1.0.0.jar
