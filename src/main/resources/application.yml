@@ -17,18 +17,6 @@ security:
     expiresInHours: 15
     secret: $10$6GBcDoRjwQcHvZpdGtEXIuNO/e4CMgWochkaQwa4RzvvztlJl0Pcq
     
-eureka:
-  instance:
-    port: ${PORT:9090}
-    hostname: localhost
-  client:
-    registerWithEureka: true
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
-
 ---
 #################################### AMBIENTE ######################################################
 spring:
@@ -51,6 +39,17 @@ auth:
   api:
     name: auth-service-dev
     url: https://app-authservice.herokuapp.com/
+eureka:
+  instance:
+    port: ${PORT:9090}
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
 --- 
 ################################### TESTE #####################################################
 spring:
@@ -63,7 +62,7 @@ spring:
     initialization-mode: always
     username: lucasdsf
     password: 12345678
-    url: jdbc:h2:~/h2bd;AUTO_SERVER=TRUE
+    url: jdbc:h2:~/h2bd2;AUTO_SERVER=TRUE
 
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
@@ -76,3 +75,15 @@ auth:
   api:
     name: auth-service-test
     url: https://app-authservice.herokuapp.com/
+#    url: http://localhost:8083
+eureka:
+  instance:
+    port: ${PORT:9090}
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
