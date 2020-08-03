@@ -1,6 +1,6 @@
 # my-user-car
 
-Aplicação em spring boot para cadastro de usuário utilizando spring security, spring jpa, swagger, mysql, h2, eureka.
+Aplicação em spring boot para cadastro de usuário utilizando spring security, spring jpa, swagger, postgres, h2, eureka.
 
 ### Api Sistema de cadastro de usuario e carro com login
 
@@ -21,6 +21,10 @@ Para utilizacao de caros:
 		- (POST) http://localhost:8083//api/cars/{id} (Endpoint Endpoint Buscar um carro do usuario logado)
 		- (POST) http://localhost:8083//api/cars/{id} (Endpoint Remover um carro do usuario logado)
 		- (POST) http://localhost:8083//api/cars/{id} (Endpoint Atualizar um carro do usuario logado)
+Swagger na heroku:
+
+<a href="http://app-userservice.herokuapp.com/swagger-ui.html" >Clique aqui para acessar a Heroku Swagger</a>
+ 
 
 ### Configuração da api
 
