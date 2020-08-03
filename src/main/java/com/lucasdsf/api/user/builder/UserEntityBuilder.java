@@ -1,7 +1,8 @@
 package com.lucasdsf.api.user.builder;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import com.lucasdsf.api.user.domains.entity.ProfileUser;
 import com.lucasdsf.api.user.domains.entity.User;
@@ -71,7 +72,7 @@ public class UserEntityBuilder {
 		user.setUserLogin(login);
 		user.setPassword(password);
 		user.setProfile(profile);
-		user.setCreatedAt(LocalDateTime.now());
+		user.setCreatedAt(ZonedDateTime.now(ZoneId.of("America/Sao_Paulo")).toLocalDateTime());
 		return user;
 	} 
 
